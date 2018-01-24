@@ -1,6 +1,6 @@
 # react-spaceform
 
-React component to manage whitespace.
+React component to manage form layouts.
 
 ### Installation
 

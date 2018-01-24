@@ -24,14 +24,12 @@
     "rimraf": "^2.6.2",
     "webpack": "^3.10.0"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "build": "rimraf lib && babel src --out-dir lib",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm run deploy",
     "deploy": "gh-pages -d styleguide",
     "predeploy": "npm run styleguide:build"
   }

@@ -10,7 +10,7 @@ type FormProps = {
   [key: string]: any
 };
 
-export const Form = ({
+const Form = ({
   width,
   labelAlign = "top",
   labelWidth,
@@ -21,3 +21,5 @@ export const Form = ({
     <form {...rest} style={{ ...style, width: width || style.width }} />
   </Provider>
 );
+
+export default Form;

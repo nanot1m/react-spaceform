@@ -5,6 +5,8 @@ type FormRowProps = {
   [key: string]: any
 };
 
-export const FormRow = ({ style = {}, ...rest }: FormRowProps) => (
+const FormRow = ({ style = {}, ...rest }: FormRowProps) => (
   <div {...rest} style={{ marginBottom: 10, ...style }} />
 );
+
+export default FormRow;

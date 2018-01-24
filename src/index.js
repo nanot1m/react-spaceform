@@ -1,5 +1,5 @@
 // @flow
-export * from "./Form";
-export * from "./FormControl";
-export * from "./FormLabel";
-export * from "./FormRow";
+export { default as Form } from "./Form";
+export { default as FormControl } from "./FormControl";
+export { default as FormLabel } from "./FormLabel";
+export { default as FormRow } from "./FormRow";

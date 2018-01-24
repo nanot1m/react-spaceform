@@ -1,10 +1,6 @@
-## Examples
-
 Top aligned labels
 
 ```js
-const { Form, FormRow, FormLabel, FormControl } = require("../src");
-
 <Form>
   <FormRow>
     <FormLabel>Login</FormLabel>
@@ -24,14 +20,12 @@ const { Form, FormRow, FormLabel, FormControl } = require("../src");
       <input type="submit" value="Sign in" />
     </FormControl>
   </FormRow>
-</Form>;
+</Form>
 ```
 
 Left aligned labels
 
 ```js
-const { Form, FormRow, FormLabel, FormControl } = require("../src");
-
 <Form labelWidth="80px" labelAlign="left">
   <FormRow>
     <FormLabel>Login</FormLabel>
@@ -51,14 +45,12 @@ const { Form, FormRow, FormLabel, FormControl } = require("../src");
       <input type="submit" value="Sign in" />
     </FormControl>
   </FormRow>
-</Form>;
+</Form>
 ```
 
 Right aligned labels
 
 ```js
-const { Form, FormRow, FormLabel, FormControl } = require("../src");
-
 <Form labelWidth="80px" labelAlign="right">
   <FormRow>
     <FormLabel>Login</FormLabel>
@@ -78,5 +70,5 @@ const { Form, FormRow, FormLabel, FormControl } = require("../src");
       <input type="submit" value="Sign in" />
     </FormControl>
   </FormRow>
-</Form>;
+</Form>
 ```

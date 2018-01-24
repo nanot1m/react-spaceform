@@ -7,7 +7,7 @@ type FormLabelProps = {
   [key: string]: any
 };
 
-export const FormLabel = ({ style, ...rest }: FormLabelProps) => (
+const FormLabel = ({ style, ...rest }: FormLabelProps) => (
   <Consumer>
     {({ labelWidth, labelAlign }) => (
       <label {...rest} style={createStyles(labelWidth, labelAlign, style)} />
@@ -34,3 +34,5 @@ const getAlignStyles = labelAlign => {
     textAlign: labelAlign
   };
 };
+
+export default FormLabel;

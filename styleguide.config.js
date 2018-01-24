@@ -12,6 +12,7 @@ module.exports = {
       ignore: ["**/src/FormContext.js"]
     },
     {
+      name: "Examples",
       content: "guides/Example.md"
     }
   ],
@@ -21,7 +22,7 @@ module.exports = {
       rules: [
         {
           test: /\.jsx?$/,
-          exclude: /node_modules/,
+          exclude: /node_modules\/(?!buble)/,
           loader: "babel-loader"
         }
       ]

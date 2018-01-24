@@ -29,7 +29,8 @@
     "build": "rimraf lib && babel src --out-dir lib",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "prepublish": "npm run build && npm run deploy",
+    "prepublish": "npm run build",
+    "postpublish": "npm run deploy",
     "deploy": "gh-pages -d styleguide",
     "predeploy": "npm run styleguide:build"
   }

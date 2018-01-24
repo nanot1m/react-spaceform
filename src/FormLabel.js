@@ -9,28 +9,30 @@ type FormLabelProps = {
 
 const FormLabel = ({ style, ...rest }: FormLabelProps) => (
   <Consumer>
-    {({ labelWidth, labelAlign }) => (
-      <label {...rest} style={createStyles(labelWidth, labelAlign, style)} />
+    {({ labelWidth, labelAlign, spacing }) => (
+      <label
+        {...rest}
+        style={createStyles(labelWidth, labelAlign, spacing, style)}
+      />
     )}
   </Consumer>
 );
 
-const createStyles = (labelWidth, labelAlign, style = {}) => ({
+const createStyles = (labelWidth, labelAlign, spacing, onwStyles = {}) => ({
   width: labelWidth,
-  ...getAlignStyles(labelAlign),
-  ...style
+  ...getAlignStyles(labelAlign, spacing),
+  ...onwStyles
 });
 
-const getAlignStyles = labelAlign => {
+const getAlignStyles = (labelAlign, spacing) => {
   if (labelAlign === "top") {
     return {
-      display: "block",
-      marginBottom: 4
+      flexBasis: "100%",
+      marginBottom: spacing
     };
   }
   return {
-    display: "inline-block",
-    marginRight: 10,
+    marginRight: spacing * 2,
     textAlign: labelAlign
   };
 };

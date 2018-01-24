@@ -6,10 +6,7 @@ type FormControlProps = {
 };
 
 const FormControl = ({ style = {}, ...rest }: FormControlProps) => (
-  <span
-    {...rest}
-    style={{ display: "inline-block", verticalAlign: "baseline", ...style }}
-  />
+  <span {...rest} style={{ ...style }} />
 );
 
 export default FormControl;

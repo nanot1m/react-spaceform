@@ -5,7 +5,7 @@ React component to manage form layouts.
 ## Installation
 
 ```bash
-npm install --save-dev react-spaceform
+yarn add react-spaceform
 ```
 
 ## Examples

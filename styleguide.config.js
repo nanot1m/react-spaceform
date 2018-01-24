@@ -1,22 +1,11 @@
 module.exports = {
-  getExampleFilename(componentPath) {
-    return componentPath.replace(/\.jsx?$/, ".md");
-  },
-  defaultExample: "guides/DefaultExample.md",
   sections: [
     {
-      content: "guides/Readme.md"
-    },
-    {
-      components: "src/[A-Z]*.js",
-      ignore: ["**/src/FormContext.js"]
-    },
-    {
-      name: "Examples",
-      content: "guides/Example.md"
+      content: "./README.md"
     }
   ],
   showSidebar: false,
+  require: [require("path").resolve(__dirname, "styleguide.setup.js")],
   webpackConfig: {
     module: {
       rules: [

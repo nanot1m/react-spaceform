@@ -1,3 +1,15 @@
+# react-spaceform
+
+React component to manage form layouts.
+
+## Installation
+
+```bash
+npm install --save-dev react-spaceform
+```
+
+## Examples
+
 Top aligned labels
 
 ```js
@@ -98,3 +110,25 @@ pass prop spacing to Form
   </FormRow>
 </Form>
 ```
+
+## API
+
+There are 4 base components
+
+```js static
+import { Form, FormRow, FormLabel, FormControl } from "react-spaceform";
+```
+
+### Form
+
+#### Props
+
+| name       | type                     | default | description         |
+| ---------- | ------------------------ | ------- | ------------------- |
+| width      | `string` or `number`     |         | form width          |
+| labelWidth | `string` or `number`     |         | labels width        |
+| labelAlign | `top`, `left` or `right` | `top`   | label position      |
+| spacing    | `number`                 | 4       | spacing base number |
+
+Components `FormRow`, `FormLabel` and `FormControl` accepts any
+valid react html-attributes.

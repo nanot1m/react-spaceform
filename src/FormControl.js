@@ -1,17 +1,20 @@
 // @flow
 import * as React from "react";
 
+import Gapped from "./Gapped";
+import { Consumer } from "./FormContext";
+
 type FormControlProps = {
+  inline?: boolean,
   [key: string]: any
 };
 
-const FormControl = ({ style, ...rest }: FormControlProps) => (
-  <span {...rest} style={getStyles(style)} />
+const FormControl = ({ inline, ...props }: FormControlProps) => (
+  <Consumer>
+    {({ spacing }) => (
+      <Gapped spacing={spacing} vertical={!inline} {...props} />
+    )}
+  </Consumer>
 );
-
-const getStyles = (ownStyles = {}) => ({
-  flex: 1,
-  ...ownStyles
-});
 
 export default FormControl;

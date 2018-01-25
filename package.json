@@ -1,6 +1,6 @@
 {
   "name": "react-spaceform",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "lib/index.js",
   "module": "src/index.js",
   "license": "MIT",
@@ -25,7 +25,11 @@
     "rimraf": "^2.6.2",
     "webpack": "^3.10.0"
   },
-  "files": ["lib", "src", "README.md"],
+  "files": [
+    "lib",
+    "src",
+    "README.md"
+  ],
   "scripts": {
     "build": "rimraf lib && babel src -d lib",
     "styleguide": "styleguidist server",
